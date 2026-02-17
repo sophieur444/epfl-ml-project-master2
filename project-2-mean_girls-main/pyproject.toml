@@ -1,0 +1,37 @@
+[project]
+name = "TSC"
+version = "0.1.0"
+description = "Tweet Sentiment Classification project, CS-433"
+authors = [
+    {name = "Lilian Noé, mail = <lilian.noe@epfl.ch>"},
+    {name = "Esther Barriol, mail = <esther.barriol@epfl.ch>"},
+    {name = "Sophie Urrea, mail = <sophie.urreabordones@epfl.ch>"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<3.15"
+
+packages = [
+    { include = "tsc", from = "src" }
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+numpy = "^2.3.4"
+scipy = "^1.16.3"
+scikit-learn = "^1.7.2"
+pandas = "^2.3.3"
+transformers = {extras = ["torch"], version = "^4.57.3"}
+datasets = "^4.4.1"
+torch = "^2.9.1"
+protobuf = "^6.33.1"
+sentencepiece = "^0.2.1"
+hf-xet = "^1.2.0"
+matplotlib = "^3.10.8"
+
+[dependency-groups]
+dev = [
+    "black (>=25.11.0,<26.0.0)"
+]
